@@ -29,7 +29,9 @@ else
 {
    Console.WriteLine(result); 
 }
+
 */
+
 
 
 
@@ -69,8 +71,8 @@ if (result == "нет")
 }
 else
 {    
-    string x = Convert.ToString(a);
-    Console.Write (" Третья цифра =" + x[2]);
+    string z = Convert.ToString(a);
+    Console.Write (" Третья цифра =" + z[2]);
 }
 
 
