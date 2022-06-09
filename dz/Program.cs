@@ -19,7 +19,7 @@ else
 } 
 */
 
- /*
+ 
 int num1, num2, num3;
 
 Console.Write( "Введите первое число: ");
@@ -44,7 +44,7 @@ else
 {
     Console.WriteLine("Максимальное число = " + num3);
 }
-*/
+
 
 /*
 int a;
@@ -64,7 +64,7 @@ Console.WriteLine("Введеное число НЕчетное ");
 */
 
 
-int N;
+/*int N;
 
 Console.Write( "Введите число: ");
 N = Convert.ToInt32(Console.ReadLine());
@@ -79,4 +79,4 @@ while(current <= N)
     } 
 current ++;
 }
-
+*/
