@@ -1,4 +1,5 @@
-﻿
+﻿/*
+
 int Stepen(int A, int B)
 {
     if (A < 0) A = A*(-1);
@@ -28,15 +29,15 @@ if (result == -1)
 }
 else
 {
-     Console.WriteLine($"A^В равно {result}");
+    Console.WriteLine($"A^В равно {result}");
 }
 
+*/
 
 
 
 
 
-/*
 int size = 8;
 int[] array = new int[size];
 
@@ -44,9 +45,8 @@ Console.Write("Заданный массив: ");
 
     for(int i = 0; i < size; i = i + 1)
     {
-         array[i] = new Random().Next(0,1000);
+        array[i] = new Random().Next(0,1000);
         Console.Write(array[i] + " ");
-    
     }
     Console.WriteLine(); 
 
@@ -57,6 +57,6 @@ void PrintArray(int[] array)
 }
 Console.Write("Вывод массива:   ");
 PrintArray(array);
-*/
+
 
 
