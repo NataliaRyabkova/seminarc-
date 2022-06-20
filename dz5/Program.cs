@@ -1,69 +1,129 @@
 ﻿
-
 /*
-
-int size = 10;
-int[] array = new int[size];  
-Console.Write("Заданный массив: ");
-
-for(int i = 0; i < size; i = i + 1)
-    {
-        array[i] = new Random().Next(100,1000);
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine(); 
-
-int count = 0;
-for (int j = 0; j < array.Length; j++)
+int[]  CreateRandomArray(int size, int min, int max)
 {
-    if (array[j] % 2 == 0) count = count + 1;
-}
-Console.WriteLine($"Количество четных чисел в массиве: {count}");
+    int[] newArray = new int[size];
 
+    for(int i = 0; i < size; i++)
+    {
+        newArray[i] = new Random().Next(min, max + 1); 
+        Console.Write(newArray[i] + " ");
+    }
+    Console.WriteLine();
+    return newArray;
+
+}
+
+int  EvenNumbers(int[] array)
+{
+    int count = 0;
+    for(int i = 0; i < array.Length; i++)
+    {
+       if (array[i] % 2 == 0) count = count + 1;
+    }
+    return count;
+}
+
+Console.WriteLine("Введите количество элементов в массиве ");
+int size1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Минимальный элемент массива ");
+int min1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Максимальный элемент массива ");
+int max1 = Convert.ToInt32(Console.ReadLine());
+
+
+int[] myArray = CreateRandomArray(size1,min1, max1);
+
+Console.WriteLine("Количество четных чисел в массиве = " + EvenNumbers(myArray));
 */
 
 
-/*
-int size = 10;
-int[] array = new int[size];  
-Console.Write("Заданный массив: ");
 
-for(int i = 0; i < size; i = i + 1)
+/*
+int[]  CreateRandomArray(int size, int min, int max)
+{
+    int[] newArray = new int[size];
+
+    for(int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(-100,100);
-        Console.Write(array[i] + " ");
+        newArray[i] = new Random().Next(min, max + 1); 
+        Console.Write(newArray[i] + " ");
     }
-    Console.WriteLine(); 
+    Console.WriteLine();
+    return newArray;
+
+}
+
+int  OddPositions(int[] array)
+{
 
 int sum = 0;
-for (int j = 0; j < array.Length; j++)
+for (int i = 0; i < array.Length; i++)
 {
-    if (j % 2 == 1) sum = sum + array [j] ;
+    if (i % 2 == 1) sum = sum + array [i];
 }
-Console.WriteLine($"Сумма элементов стоящих на нечетных позициях: {sum}");
+return sum;
+}
 
+Console.WriteLine("Введите количество элементов в массиве ");
+int size1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Минимальный элемент массива ");
+int min1 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine("Максимальный элемент массива ");
+int max1 = Convert.ToInt32(Console.ReadLine());
+
+
+int[] myArray = CreateRandomArray(size1,min1, max1);
+
+Console.WriteLine("Сумма элементов, стоящих на нечетных позициях = " + OddPositions(myArray));
 */
 
 
-int size = 10;
-int[] array = new int[size];  
-Console.Write("Заданный массив: ");
-int max = array[0];
-int min = array[0];
 
-for(int i = 0; i < size; i = i + 1)
-    {
-        array[i] = new Random().NextDouble();
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine(); 
+ 
 
-for (int i = 0; i < array.Length; i++)
+
+double[]  CreateRandomArray(int size)
 {
+    double[] newArray = new double[size];
+
+    for(int i = 0; i < size; i++)
+    {
+        newArray[i] = new Random().NextDouble()*100; 
+        
+        Console.Write(Math.Round(newArray[i],2) + "  ");
+    }
+    Console.WriteLine();
+    return newArray;
+
+}
+    
+   
+
+double Differencemaxmin(double[] array)
+{
+
+double max = array[0];
+double min = array[0];
+
+
+for(int i = 0; i < array.Length; i = i + 1)
+    
+{
+    array[i] = Math.Round(array[i],2);
     if (array[i] > max) max = array[i];
     if (array[i] < min) min = array[i];
 }
-Console.WriteLine();
-Console.Write("Разница между максимальным и минимальным элементом равна:");
-Console.Write(max - min);
-    
+return max-min;
+}
+
+Console.WriteLine("Введите количество элементов в массиве ");
+int size1 = Convert.ToInt32(Console.ReadLine());
+
+
+double[] myArray = CreateRandomArray(size1);
+Console.WriteLine("Разница между максимальным и минимальным элементом в массиве = " + Differencemaxmin(myArray));
