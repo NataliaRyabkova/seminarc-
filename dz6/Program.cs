@@ -1,34 +1,32 @@
 ﻿
-
 /*
-Console.Write("Введите колличество чисел, M: ");
-int M = Convert.ToInt32(Console.ReadLine());
-int[] array = new int[M];
-
-void VvodNumber(int M)
-{   
-for (int i = 0; i < M; i++)
+int[] VvodNumber(int M)
+{  
+  int[] array = new int[M];
+  for (int i = 0; i < M; i++)
   {
     Console.Write($"Введите число {i + 1}: ");
     array[i] = Convert.ToInt32(Console.ReadLine());
   }
+  return array;
 }
 
 
 int Colichestvopositivenumber(int[] array1)
 {
+ 
   int count = 0;
   for (int i = 0; i < array1.Length; i++)
   {
-    if(array1[i] > 0 ) count += 1; 
+    if(array1[i] > 0 ) count = count + 1; 
   }
   return count;
 }
 
 
-VvodNumber(M);
-
-Console.WriteLine($"Введено {Colichestvopositivenumber(array)} чисел больше нуля ");
+Console.Write("Введите количество чисел, M: ");
+int M1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine($"Введено {Colichestvopositivenumber(VvodNumber(M1))} чисел больше нуля ");
 */
 
 
