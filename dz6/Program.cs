@@ -26,9 +26,10 @@ int Colichestvopositivenumber(int[] array1)
 
 Console.Write("Введите количество чисел, M: ");
 int M1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine($"Введено {Colichestvopositivenumber(VvodNumber(M1))} чисел больше нуля ");
-*/
+int[] myArray = VvodNumber(M1);
+Console.WriteLine($"Введено {Colichestvopositivenumber(myArray)} чисел больше нуля ");
 
+*/
 
 
 
@@ -62,7 +63,9 @@ void CopyArray(int[] array1, int[] array2)
 
 Console.WriteLine("Введите количество элементов в массиве ");
 int size1 = Convert.ToInt32(Console.ReadLine());
-CopyArray(new int[size1],SpecifiedArray(size1));
+int[] myArray = SpecifiedArray(size1);
+CopyArray(new int[size1],myArray);
+
 
 
 
