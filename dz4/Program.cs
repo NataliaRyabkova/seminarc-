@@ -39,24 +39,7 @@ else
 
 
 int size = 8;
-int[] array = new int[size];
-
-Console.Write("Заданный массив: ");
-
-    for(int i = 0; i < size; i = i + 1)
-    {
-        array[i] = new Random().Next(0,1000);
-        Console.Write(array[i] + " ");
-    }
-    Console.WriteLine(); 
-
-void PrintArray(int[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    Console.Write(array[i]+ " ");
-}
-Console.Write("Вывод массива:   ");
-PrintArray(array);
+rite
 
 
 
