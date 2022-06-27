@@ -89,7 +89,7 @@ Console.WriteLine("Сумма элементов, стоящих на нечет
 
  
 
-
+/*
 double[]  CreateRandomArray(int size)
 {
     double[] newArray = new double[size];
