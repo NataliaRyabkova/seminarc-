@@ -1,5 +1,5 @@
 ﻿
-/*
+
 int[] VvodNumber(int M)
 {  
   int[] array = new int[M];
@@ -29,10 +29,10 @@ int M1 = Convert.ToInt32(Console.ReadLine());
 int[] myArray = VvodNumber(M1);
 Console.WriteLine($"Введено {Colichestvopositivenumber(myArray)} чисел больше нуля ");
 
-*/
 
 
 
+/*
 int []  SpecifiedArray(int size)
 {
     int[] newArray = new int[size];
@@ -65,6 +65,7 @@ Console.WriteLine("Введите количество элементов в м�
 int size1 = Convert.ToInt32(Console.ReadLine());
 int[] myArray = SpecifiedArray(size1);
 CopyArray(new int[size1],myArray);
+*/
 
 
 
