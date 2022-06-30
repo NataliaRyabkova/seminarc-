@@ -56,7 +56,7 @@ ShowArray(Arrangefromminmax(myarray));
 */
 
 //Задача 2.
-
+/*
  int [,] GreateNotsquareTwoDimArray(int m, int n)
 {
     int[,] array = new int [m,n];
@@ -80,56 +80,30 @@ void ShowArray(int[,] array)
 
 
 int MinimumAmountLinek(int [,] array)
-{   
-    int min = 0;
-    int sum = 0;
-    int imin = 0;  
+{    
+    int sum = 0; 
     for(int j = 0; j < array.GetLength(1); j++) 
     {     
-       sum += array [1,j];
+       sum += array [0,j];
     }
-       min = sum;
-       imin = 1;
-        for (int k = 1; k < array.GetLength(1); k++)
+       int min = sum;
+       int imin = 0;
+
+        for (int k = 1; k < array.GetLength(0); k++)
         {   
-            for (int i = 0; i < array.GetLength(0); i++)
+            sum = 0;
+            for (int i = 0; i < array.GetLength(1); i++)
             {
-                sum += array [i,k];      
+                sum += array [k,i]; 
+            }       
                 if(sum < min)
                 {
                     min = sum;
-                    imin = i;
-                } 
-            }                                         
-        }
-     
-return min;     
+                    imin = k;
+                }                                                    
+        }     
+return imin;     
 } 
-
-
-/*
-int MinimumAmountLinek(int [,] array)
-{
-int index = 0;
-    int sum = 0;
-    int result = 0;
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        sum = 0;
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            sum += array[i, j];
-        }
-        if (i == 0) result = sum;
-        else if (sum < result)
-        {
-            result = sum;
-            index = i;
-        }
-    }
-    return index;
-}
-*/
 
 Console.WriteLine("Введите количество строк в массиве, a");
 int a1 = Convert.ToInt32(Console.ReadLine());
@@ -141,5 +115,49 @@ if (a1 == b1) Console.WriteLine ("Введено неверное количес
 else ShowArray(myarray);
 
 Console.WriteLine ("Строка с наименьшей суммой элементов, строка " + MinimumAmountLinek(myarray));
+*/
 
+//Задача 3.
+
+int[,] SpiralArray(int n)
+
+{
+int[,] newarray = new int[n, n];
+
+int temp = 1;
+int i = 0;
+int j = 0;
+
+for (temp = 1; temp <= newarray.GetLength(0) * newarray.GetLength(1); temp ++)
+{
+  newarray[i, j] = temp;
+  
+  if (i <= j + 1 && i + j < newarray.GetLength(1) - 1)
+    j++;
+  else if (i < j && i + j >= newarray.GetLength(0) - 1)
+    i++;
+  else if (i >= j && i + j > newarray.GetLength(1) - 1)
+    j--;
+  else
+    i--;
+ 
+}
+return newarray;    
+}
+
+
+void ShowArray(int[,] array)
+{
+    for(int i = 0; i < array.GetLength(0); i++)
+    {
+        for(int j = 0; j < array.GetLength(1); j++)
+        {
+          Console.Write(array[i,j] + " ");  
+        }
+        Console.WriteLine();
+    }
+}
+
+int[,] myarray = SpiralArray(4);
+ShowArray(myarray);
 
