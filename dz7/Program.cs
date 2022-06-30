@@ -38,6 +38,7 @@ ShowTwoDiArray(myArray);
 
 
 //Задача 2.
+
 /*
 int[,] CreateRandomTwoDemArray(int a, int b)
 {
@@ -87,6 +88,7 @@ PositionElement(m1, n1, myArray);
 
 
 
+
 //Задача 3.
 
 
@@ -131,3 +133,5 @@ int n1 = Convert.ToInt32(Console.ReadLine());
 
 int [,] myArray = CreateRandomTwoDemArray(m1, n1);
 AverageValue(myArray);
+
+
