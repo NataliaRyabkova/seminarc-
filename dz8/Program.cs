@@ -55,8 +55,10 @@ Console.WriteLine();
 ShowArray(Arrangefromminmax(myarray));
 */
 
+
 //Задача 2.
-/*
+
+
  int [,] GreateNotsquareTwoDimArray(int m, int n)
 {
     int[,] array = new int [m,n];
@@ -102,7 +104,7 @@ int MinimumAmountLinek(int [,] array)
                     imin = k;
                 }                                                    
         }     
-return imin;     
+return imin + 1; // Для наглядности пользователям, которые считают строки с 1, а не с 0.    
 } 
 
 Console.WriteLine("Введите количество строк в массиве, a");
@@ -112,13 +114,16 @@ int b1 = Convert.ToInt32(Console.ReadLine());
 
 int[,] myarray = GreateNotsquareTwoDimArray(a1,b1);
 if (a1 == b1) Console.WriteLine ("Введено неверное количество строк и столбцов, массив должен быть прямоугольный");
-else ShowArray(myarray);
-
+else 
+{
+ShowArray(myarray);
 Console.WriteLine ("Строка с наименьшей суммой элементов, строка " + MinimumAmountLinek(myarray));
-*/
+}
+
+
 
 //Задача 3.
-
+/*
 int[,] SpiralArray(int n)
 
 {
@@ -158,4 +163,4 @@ void ShowArray(int[,] array)
 
 int[,] myarray = SpiralArray(4);
 ShowArray(myarray);
-
+*/
