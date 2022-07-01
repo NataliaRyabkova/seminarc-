@@ -123,25 +123,23 @@ int[,] SpiralArray(int n)
 
 {
 int[,] newarray = new int[n, n];
-
-int temp = 1;
+int num = 1;
 int i = 0;
 int j = 0;
 
-for (temp = 1; temp <= newarray.GetLength(0) * newarray.GetLength(1); temp ++)
-{
-  newarray[i, j] = temp;
+    for (num = 1; num <= newarray.GetLength(0) * newarray.GetLength(1); num ++)
+    {
+        newarray[i, j] = num;
   
-  if (i <= j + 1 && i + j < newarray.GetLength(1) - 1)
-    j++;
-  else if (i < j && i + j >= newarray.GetLength(0) - 1)
-    i++;
-  else if (i >= j && i + j > newarray.GetLength(1) - 1)
-    j--;
-  else
-    i--;
- 
-}
+        if (j >= i - 1  &&  j <  newarray.GetLength(1) - (i + 1))
+        j++;
+        else if (i < j  &&  i >= newarray.GetLength(0) - (j + 1))
+        i++;
+        else if (j <= i &&  j >  newarray.GetLength(1) - (i + 1))
+        j--;
+        else if (i > j  &&  i <= newarray.GetLength(0) - (j + 1))
+        i--;         
+    }
 return newarray;    
 }
 
