@@ -1,6 +1,7 @@
 ﻿
 
 //Задача 1.
+
 /*
 int [,] GreateTwoDimArray(int m, int n)
 {
@@ -24,19 +25,20 @@ void ShowArray(int[,] array)
     }
 }
 
+
 int[,] Arrangefromminmax(int[,] array)
 {
     for(int i = 0; i < array.GetLength(0); i++) 
     {
         for(int j = 0; j < array.GetLength(1); j++)
         {            
-            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            for (int n = 0; n < array.GetLength(1); n++)
                 {
-                    if (array[i, k] > array[i, k + 1])
+                    if (array[i, j] < array[i, n])
                         {
-                            int temp = array[i, k + 1];
-                            array[i, k + 1] = array[i, k];
-                            array[i, k] = temp;
+                            int temp = array[i, j];
+                            array[i, j] = array[i, n];
+                            array[i, n] = temp;
                         }
                 }
         }
@@ -54,7 +56,6 @@ ShowArray(myarray);
 Console.WriteLine();
 ShowArray(Arrangefromminmax(myarray));
 */
-
 
 //Задача 2.
 
@@ -107,6 +108,7 @@ int MinimumAmountLinek(int [,] array)
 return imin + 1; // Для наглядности пользователям, которые считают строки с 1, а не с 0.    
 } 
 
+
 Console.WriteLine("Введите количество строк в массиве, a");
 int a1 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Введите количество столбцов в массиве, b");
@@ -119,6 +121,7 @@ else
 ShowArray(myarray);
 Console.WriteLine ("Строка с наименьшей суммой элементов, строка " + MinimumAmountLinek(myarray));
 }
+
 
 
 
