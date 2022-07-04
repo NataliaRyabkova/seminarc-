@@ -37,5 +37,5 @@ int NumberOfDigits(int n)
 Console.Write("Введите число: ");
 int m = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine (NumberOfDigits(m));
+Console.WriteLine ("Количество цифр в числе равно: " + NumberOfDigits(m));
 
