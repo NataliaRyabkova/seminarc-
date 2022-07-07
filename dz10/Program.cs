@@ -92,6 +92,5 @@ Console.Write("Введите размер массива: ");
 int size = Convert.ToInt32(Console.ReadLine());
 
 string[] names = CreateStringArray(size);
-//Console.Write (String.Join(", ", (PairwiseArray(names))));
 PairwiseArray(names);
 
